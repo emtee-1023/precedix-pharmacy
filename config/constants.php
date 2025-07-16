@@ -41,7 +41,7 @@ return [
 
     //currency_precision & quantity_precision moved to business settings
 
-    'product_img_path' => 'img',
+    'product_img_path' => 'uploads/img',
 
     'enable_sell_in_diff_currency' => false,
     'currency_exchange_rate' => 1,
@@ -58,10 +58,11 @@ return [
     'google_recaptcha_key' => env('GOOGLE_RECAPTCHA_KEY'),
     'google_recaptcha_secret' => env('GOOGLE_RECAPTCHA_SECRET'),
     'enable_recaptcha' => env('ENABLE_RECAPTCHA', false),
-    
+
     'mpdf_temp_path' => storage_path('app/pdf'), //Temporary path used by mpdf
 
-    'document_upload_mimes_types' => ['application/pdf' => '.pdf',
+    'document_upload_mimes_types' => [
+        'application/pdf' => '.pdf',
         'text/csv' => '.csv',
         'application/zip' => '.zip',
         'application/msword' => '.doc',
